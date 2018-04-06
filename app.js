@@ -1,3 +1,7 @@
+const addToDoForm = document.getElementById('addToDoForm');
+const newToDoText = document.getElementById('newToDoText');
+const toDoList = document.getElementById('toDoList');
+
 function onReady() {
   let toDos = [];
 
@@ -5,12 +9,15 @@ function onReady() {
     if (!newToDoText.value) {
       return;
     }
-
     toDos.push({
       title: newToDoText.value,
       complete: false
     });
+
+    newToDoText.value = '';
     renderTheUI();
+
+
   }
 
   function renderTheUI() {
@@ -36,14 +43,11 @@ function onReady() {
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     createNewToDo();
-    newToDoText.value = '';
+
 
   });
 
-  const addToDoForm = document.getElementById('addToDoForm');
-  const newToDoText = document.getElementById('newToDoText');
-  const toDoList = document.getElementById('toDoList');
-  renderTheUI();
+
 }
 
 window.onload = function() {
