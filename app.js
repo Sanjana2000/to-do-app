@@ -49,7 +49,7 @@ function onReady() {
       newLi.appendChild(checkbox);
       newLi.appendChild(deleteButton);
     });
-}
+  }
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
