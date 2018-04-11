@@ -3,6 +3,7 @@ const newToDoText = document.getElementById('newToDoText');
 const toDoList = document.getElementById('toDoList');
 
 function onReady() {
+<<<<<<< HEAD
   let toDos = [];
   let id = 0;
 
@@ -20,6 +21,16 @@ function onReady() {
     newToDoText.value = '';
     renderTheUI();
 
+=======
+  const addToDoForm = document.getElementById('addToDoForm');
+  const newToDoText = document.getElementById('newToDoText');
+  const toDoList = document.getElementById('toDoList');
+  addToDoForm.addEventListener('submit', () => {
+    event.preventDefault();
+
+    // get the text
+let title = newToDoText.value;
+>>>>>>> checkpoint10
 
   }
 
@@ -34,6 +45,7 @@ function onReady() {
 
     toDoList.textContent = '';
 
+<<<<<<< HEAD
     toDos.forEach(function(toDo) {
       const newLi = document.createElement('li');
 
@@ -56,7 +68,16 @@ function onReady() {
     createNewToDo();
   });
 }
+=======
+// attach the li to the ul
+ toDoList.appendChild(newLi);
 
+ //empty the input
+  newToDoText.value = '';
+});
+>>>>>>> checkpoint10
+
+ }
 window.onload = function() {
-  onReady();
+   onReady();
 };
